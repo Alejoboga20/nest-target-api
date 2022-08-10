@@ -5,37 +5,37 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
-  @Column()
+  @Column({ unique: true })
   email: string;
 
-  @Column()
+  @Column({ nullable: true })
   uid: string;
 
-  @Column()
+  @Column({ nullable: true })
   provider: string;
 
-  @Column()
+  @Column({ nullable: true })
   first_name: string;
 
-  @Column()
+  @Column({ nullable: true })
   last_name: string;
 
-  @Column()
+  @Column({ unique: true })
   username: string;
 
-  @Column()
+  @Column({ nullable: true })
   created_at: string;
 
-  @Column()
+  @Column({ nullable: true })
   updated_at: string;
 
   @Column()
   gender: string;
 
-  @Column()
+  @Column({ nullable: true })
   push_token: string;
 
-  @Column()
+  @Column({ nullable: true })
   allow_password_change: boolean;
 
   //TODO: Avatar (tabla con imagenes)
