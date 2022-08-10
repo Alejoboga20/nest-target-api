@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { UserModule } from './user/user.module';
+import { UsersModule } from './user/users.module';
 import { CommonModule } from './common/common.module';
 
 @Module({
@@ -18,7 +18,7 @@ import { CommonModule } from './common/common.module';
       autoLoadEntities: true,
     }),
 
-    UserModule,
+    UsersModule,
 
     CommonModule,
   ],
