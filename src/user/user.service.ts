@@ -6,7 +6,9 @@ export class UserService {
   private users: CreateUserDto[] = [];
 
   signup(createUserDto: CreateUserDto) {
-    return this.users.push(createUserDto);
+    this.users.push(createUserDto);
+
+    return createUserDto;
   }
 
   signin() {
